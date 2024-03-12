@@ -1,0 +1,102 @@
+/* For targetting class u can use (.) and for id we can use (#) */
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
+}
+
+.navbar{
+   width: 100%;
+   height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: black;
+}
+.container{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+h1{
+    color: white;
+}
+.logo{
+    margin-left: 20px;
+    width: 64px;
+}
+
+.nav{
+    margin-right: 30px;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav li{
+    list-style: none;  
+}
+.nav li a{
+    color: white;
+    text-decoration: none;
+    padding: 5px, 10px;
+    border-radius: 10px;
+}
+/* now i want to apply the hover */
+.nav li a:hover{
+    background-color: #660c0c;
+}
+#menu-btn{
+    display: none;
+}
+
+.hide{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 250px;
+    height: auto;
+    background-color: rgba(34, 34, 34, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(23, 23, 23, 0.3);
+    display: none;
+}
+
+.hide li{
+    list-style: none;
+    width: 100%;
+}
+.hide li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+
+}
+.hide li a:hover{
+    background-color: red;
+}
+/* You can use media queries to hide and unhide elements
+ like a hamburger menu for different screen sizes. */
+
+ @media only screen and (max-width: 767px) {
+    .nav .mobile{
+        display: none;
+    }
+    #menu-btn{
+        display: block;
+    }
+}
+
